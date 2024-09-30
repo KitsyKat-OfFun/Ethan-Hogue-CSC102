@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Game</title>
+    <script>
+        // Create a function that runs the game
+        function playGame()
+        {
+            // Narrate what's happening here in the console
+            console.log("playGame function called.");
+
+            // Roll the die
+            var die1 = rollDie();
+            console.log("The first die rolled a " + die1);
+            var die2 = rollDie();
+            console.log("The second die rolled a " + die2);
+
+            // Add both die rolls
+            var sum = die1 + die2;
+            console.log("The sum of both rolls is " + sum);
+
+            // Output the rolls to the page
+            document.getElementById("die1Result").textContent = "Die 1 is " + die1;
+            document.getElementById("die2Result").textContent = "Die 2 is " + die2;
+            document.getElementById("sumResult").textContent = "The sum of both rolls is " + sum;
+
+            // Game logic
+            if (sum == 7 || sum == 11)
+            {
+                // If you role a 7 or 11, you lose
+                document.getElementById("gameResult").textContent = "You lose!"
+            }
+            else if (die1 == die2 && die1 % 2 == 0)
+            {
+                // If the rolls are the same with no remainder, you win
+                document.getElementById("gameResult").textContent = "You win!"
+            }
+            else
+            {
+                // If any other result comes up, you tie
+                document.getElementById("gameResult").textContent = "You tied!"
+            }
+        }
+
+        // Generates a die roll between 1-20
+        function rollDie()
+        {
+            //Generates a random number between 1-20
+            var die = Math.random() * 20;
+            // Return the number
+            return Math.ceil(die); // Return a whole number
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my dice game. Click the button to play.</h1>
+    </header>
+
+    <main>
+        <button onclick="playGame();">Play Game</button>
+        <div id="gameResult">Game Results</div>
+        <div id="die1Result">Die 1 Result</div>
+        <div id="die2Result">Die 2 Result</div>
+        <div id="sumResult">Sum Result</div>
+    </main>
+</body>
+</html>
