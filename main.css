@@ -1,0 +1,48 @@
+/* 
+selector (can be an HTML element, an id (start with #) or a custom style (start with .))
+{
+    property: value;
+}
+*/
+
+/* This applies to the whole page */
+body
+{
+    background-color: lightgreen;
+    color: green;
+}
+
+/* By default, this creates a box for the menu */
+nav
+{
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+
+/* Add footer styling */
+footer
+{
+    text-align: center;
+    margin-right: 200px;
+}
+
+#memeImage3
+{
+    height: 600px;
+    width: 400px;
+}
+
+p
+{
+    width: 100%;
+    text-align: center;
+}
+
+/* A custom style example */
+.leftalign
+{
+    text-align: left;
+}
