@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>W6 Login Page</title>
+        <link rel="stylesheet" href="main.css">
+        <style>
+            #loginStatus
+            {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to my Login Page.</h1>
+
+        <h2>Please log in to continue:</h2>
+        <br>
+        <div id="loginStatus"></div>
+        <br>
+        <!-- Create the fields the user needs to enter. -->
+        <form method="post" onsubmit="return validateForm();">
+            <label for="fName">First Name:</label>
+            <input type="text" id="fName" name="fname">
+            <br>
+            <label for="lName">Last Name:</label>
+            <input type="text" id="lname" name="lname">
+            <br>
+            <label for="zip">Zip Code:</label>
+            <input type="number" id="zip" name="zip">
+            <br>
+            <input type="submit" value="Log In">
+        </form>
+
+        <!-- This will be the script that handles validation. -->
+        <script src="script.js">
+            
+        </script>
+    </body>
+</html>
