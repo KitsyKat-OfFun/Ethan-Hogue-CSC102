@@ -9,6 +9,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSC102 Index Page</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* embedded style - Use with caution */
+        /* body
+        {
+            background-color: green;
+        } */
+    </style>
+
+    <!-- The script that handles moving the image around the screen -->
+    <script src="indexImageMove.js">
+        
+    </script>
 </head>
 <!-- The body will be in the middle of the page-->
 <body>
@@ -20,10 +34,15 @@
             <a href="index.html">Index Page</a>
             <br>
             <a href="boards.html">Boards Page</a>
+            <br>
+            <a href="w3game.html">Try a little game</a>
         </nav>
     </header>
     <!-- Paragraph tag -->
     <p>
+        <!-- Include buttons to start and stop making one of the images move around the screen -->
+        <input type="button" id="startButton" value="Start Moving Image" onclick="moveImage();">
+        <input type="button" id="stopButton" value="Stop Moving Image" onclick="stopMoveImage();" disabled="true">
         <!-- Image source and ID-->
         <img src="Pingu Programming Meme.jfif" id="memeImage1">
         <img src="states-of-a-programmer.png" id="memeImage2">
