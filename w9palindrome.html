@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W9 Palindrome Checker</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to my little palindrome checker. Put in a word, and see if it's the same backwards.</h1>
+    </header>
+    <script>
+        //create a function to see if a word is a palindrome
+        function checkPalindrome(wordToTest)
+        {
+            //remove all spaces
+            var cleanString = wordToTest.replace(/\s/g, "").toLowerCase();
+
+            //take the cleaned word and reverse it
+            var reversedString = cleanString.split("").reverse().join("");
+
+            //if the clean and reversed words are the same, the function returns true. Otherwise, it's false.
+            return cleanString == reversedString;
+        }
+
+        console.log("radar = " + checkPalindrome("radar"));
+        console.log("tag = " + checkPalindrome("tag"));
+        console.log("A man a plan a canal Panama = " + checkPalindrome("a man a plan a canal panama"));
+
+        //track if the user wants to keep entering words
+        var bContinue = true;
+
+        //loop to keep running as long as the user wants
+        do
+        {
+            //get a word from the user
+            var userInput = prompt("Enter a word to see if it's a palindrome:")
+
+            //test the variable the user entered
+            var isPalindrome = checkPalindrome(userInput);
+
+            //show a message based on the true/false value returned from the function. If true, this if statement will run.
+            if(isPalindrome)
+            {
+                alert(userInput + " is a palindrome!")
+            }
+            else
+            {
+                alert(userInput + " isn't a palindrome.")
+            }
+
+            //ask the user if they wanna keep putting in words
+            var answer = prompt("Do you want to enter another word? (yes/no)")
+
+            //test if they said no. If they did, set bContinue to false and end the loop
+            if(answer.toLowerCase() == "no")
+            {
+                bContinue = false;
+            }
+        }while(bContinue);
+    </script>
+</body>
+</html>
