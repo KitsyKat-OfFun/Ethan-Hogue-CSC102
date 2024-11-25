@@ -10,7 +10,7 @@ function addSound()
     soundElement.setAttribute("id", "audioSound");
 
     //Set the sound file that'll be played.
-    soundElement.setAttribute("src", "MMWorld3ExtraLife.wav");
+    soundElement.setAttribute("src", "DescendingNote.wav");
 
     document.body.appendChild(soundElement);
 
