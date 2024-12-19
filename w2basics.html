@@ -8,6 +8,35 @@
 <body>
     <!-- h1 is the page title, there should only be one h1 on a page -->
     <h1>Welcome to Week 2 JavaScript Basics</h1>
+    <!-- A nav section for the menu -->
+    <nav>
+        <!-- Anchor tag -->
+        <a href="index.html">Index Page</a>
+        <br>
+        <a href="boards.html">Boards Page</a>
+        <br>
+        <a href="w2basics.html">Basics Page</a>
+        <br>
+        <a href="w3game.html">Game Test</a>
+        <br>
+        <a href="w6form.html">Form Test</a>
+        <br>
+        <a href="w6strings.html">Strings Test</a>
+        <br>
+        <a href="w8events.html">Events Test</a>
+        <br>
+        <a href="W9class.html">Classes Test</a>
+        <br>
+        <a href="w9palindrome.html">Palindrome Test</a>
+        <br>
+        <a href="w11array.html">Array Test</a>
+        <br>
+        <a href="w11sound.html">Sound Test</a>
+        <br>
+        <a href="w13recursion.html">Recursion Test</a>
+        <br>
+        <a href="w13table.html">Table Test</a>
+    </nav>
 
     <!-- subheadings for the four foundations of programming -->
     <h2>Variables</h2>
@@ -33,17 +62,113 @@
             var num1 = 0;
             var num2 = 0;
 
-            // Gather a number from the user
-            num1 = prompt("Please enter number 1: ");
-            num2 = prompt("Please enter number 2: ");
+            // Gather a number from the user. Prompt will only disappear if a number is put in.
+            do
+            {
+                num1 = prompt("Please enter number 1: ");
+            }
+            while(isNaN(num1)); //Nan = Not a Number
+
+            do
+            {
+                num2 = prompt("Please enter number 2: ");
+            }
+            while(isNaN(num2));
+
+            //Because JavaScript is dynamically typed, cast the inputs as numbers
+            var sum = parseInt(num1) + parseInt(num2);
+            alert("the sum is " + sum);
+
+            //Return the sum
+            return sum;
         }
 
         // Call the function
-        runCalculation();
+        var theSum = runCalculation();
     </script>
 
     <h2>Decision Logic</h2>
 
+    <script>
+        //Create a variable to test
+        var age = 20; //Single = is assignment
+        //Value on the left of = because the same as the right
+
+        //Booleans hold only two values, true or false
+        var HasDriversPermit = true;
+
+        //Test the variable and display a message depending on it
+        if (age == 5) //Double equals is to check if values match
+        {
+            console.log("age is 5");
+        }
+        else
+        {
+            console.log("age isn't 5");
+        }
+
+        //check multiple conditions
+        //can only have one if statement in a block
+        if (age == 6)
+        {
+            console.log("age is 6");
+        }
+        else if (age == 12)
+        {
+            console.log("age is 12");
+        }
+        else if (age == 20)
+        {
+            console.log("age is 20");
+        }
+        else if (age == 15 || age == 16) // || means it's true if either condition is met
+        {
+            console.log("Age is 15 or 16")
+        }
+        else if (age == 16 && HasDriversPermit) // && means it's true if both conditions are met
+        {
+            console.log("You can legally drive with an adult")
+        }
+        else //Catch-all. If nothing else is true, run this part
+        {
+            console.log("age is something else")
+        }
+    </script>
+
     <h2>Loops</h2>
+    <script>
+        //Loops run code repeatedly; they're great for displaying data. There are two categories of loops in JavaScript: "for" loops and "while" loops. Generally, if you know how many times a loop should run, use a for loop. If you don't, use a while loop.
+        //For loop example
+        //1st: initialize counter variable. 2nd: the condition that runs the loop while true. 3rd: increment the counter variable by 1
+        for (var i = 0; i < 5; i++)
+        {
+            console.log("for loop i = " + i)
+        }
+
+        //Set up a variable for our while loop
+        var i = 0;
+
+        //While loop example
+        //the condition that runs the loop while it's true
+        //While loops can run however many times you run
+        while (i < 5)
+        {
+            console.log("while loop i = " + i)
+            //Infinite loops are bad. When working with ine, always create an off-ramp first.
+            i++;
+        }
+
+        //Do while loops run at least once, all the way to infinite times
+        i = 0
+
+        //do while loops are great with user input
+        do
+        {
+            console.log("do while loop i = " + i)
+            //Again, set up an off ramp.
+            i++;
+        }
+        while(i < 5);
+    </script>
 </body>
 </html>
