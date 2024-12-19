@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W11 Array Example</title>
+</head>
+<body>
+    <h1>Pizza Chef Array Example</h1>
+    <!-- A nav section for the menu -->
+    <nav>
+        <!-- Anchor tag -->
+        <a href="index.html">Index Page</a>
+        <br>
+        <a href="boards.html">Boards Page</a>
+        <br>
+        <a href="w2basics.html">Basics Page</a>
+        <br>
+        <a href="w3game.html">Game Test</a>
+        <br>
+        <a href="w6form.html">Form Test</a>
+        <br>
+        <a href="w6strings.html">Strings Test</a>
+        <br>
+        <a href="w8events.html">Events Test</a>
+        <br>
+        <a href="W9class.html">Classes Test</a>
+        <br>
+        <a href="w9palindrome.html">Palindrome Test</a>
+        <br>
+        <a href="w11array.html">Array Test</a>
+        <br>
+        <a href="w11sound.html">Sound Test</a>
+        <br>
+        <a href="w13recursion.html">Recursion Test</a>
+        <br>
+        <a href="w13table.html">Table Test</a>
+    </nav>
+
+    <p>Total Pizzas Baked: <span id=spnTotalPizzas></span></p>
+
+    <p>Baking Level <span id="spnLevel"></span></p>
+
+    <label for="txt">New Pizzas Baked:</label>
+    <input type="number" id="txt" name="numPizzas" min="1" max="1000" value="0">
+
+    <button onclick="updateChefStats();">Update Stats</button>
+
+    <p>Toppins: <span id="spnToppings"></span></p>
+
+    <script>
+        //Create topping variables
+        var topping1 = "pepperoni";
+        var topping2 = "Mushrooms";
+        var topping3 = "Olives";
+        var topping4 = "Sausages";
+        var topping5 = "Ham";
+        var topping6 = "Anchovies";
+        var topping7 = "Pineaapple";
+        var topping8 = "Cinnamon";
+
+        //Refactor the toppings code to use an array
+        var arrToppings = ["Pepperoni", "Mushrooms", "Olives", "Sausages", "Ham", "Anchovies", "Pineapple", "Cinnamon"];
+
+        //Print out the toppings in the array using a loop
+        //When looping through an array, start with the counter at 0, increment by 1 every loop, and stop once it reaches the number of items in the array
+        //var = var + new value
+        //var += new value
+        for (var i = 0; i < arrToppings.length; i++)
+        {
+            document.getElementBiId("spnToppings").innerHTML += arrToppings[i] + ",&nbsp;";
+        }
+    </script>
+</body>
+</html>

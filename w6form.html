@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 Form Exampe</title>
+</head>
+<body>
+    <h1>Simple Form</h1>
+    <!-- A nav section for the menu -->
+    <nav>
+        <!-- Anchor tag -->
+        <a href="index.html">Index Page</a>
+        <br>
+        <a href="boards.html">Boards Page</a>
+        <br>
+        <a href="w2basics.html">Basics Page</a>
+        <br>
+        <a href="w3game.html">Game Test</a>
+        <br>
+        <a href="w6form.html">Form Test</a>
+        <br>
+        <a href="w6strings.html">Strings Test</a>
+        <br>
+        <a href="w8events.html">Events Test</a>
+        <br>
+        <a href="W9class.html">Classes Test</a>
+        <br>
+        <a href="w9palindrome.html">Palindrome Test</a>
+        <br>
+        <a href="w11array.html">Array Test</a>
+        <br>
+        <a href="w11sound.html">Sound Test</a>
+        <br>
+        <a href="w13recursion.html">Recursion Test</a>
+        <br>
+        <a href="w13table.html">Table Test</a>
+    </nav>
+
+    <!-- html form allows us to enter info and do something with it, assuming a server is set up -->
+    <form action="" method="post" onsubmit="return validateForm();">
+        <!-- Set up a label and textbox -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="emailaddr">Email:</label>
+        <input type="email" id="emailaddr" name="emailaddr">
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm()
+        {
+            // Get what the user entered and put it all into variables
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("emailaddr").value;
+            var age = document.getElementById("age").value;
+
+            console.log("name = " + name)
+            console.log("email = " + email)
+            console.log("age = " + age)
+
+            //Check if name is empty, removing any spaces at the beginning or end
+            if (name.trim() == "")
+            {
+                alert("Please enter a name.")
+            }
+
+            //Check if email is empty
+            if (email.trim() == "")
+            {
+                alert("Please enter an email.")
+            }
+
+            //Check if age is empty
+            if (age.trim() == "")
+            {
+                alert("Please enter an age.")
+            }
+
+            //make sure age is a number
+            if (isNaN(age))
+            {
+                alert("Age is not valid")
+            }
+
+            // Prevent the form from submitting to the server
+            return false;
+        }
+    </script>
+</body>
+</html>

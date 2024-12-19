@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Events Examples</title>
+</head>
+<body>
+    <h1>Week 8 Events Examples</h1>
+    <!-- A nav section for the menu -->
+    <nav>
+        <!-- Anchor tag -->
+        <a href="index.html">Index Page</a>
+        <br>
+        <a href="boards.html">Boards Page</a>
+        <br>
+        <a href="w2basics.html">Basics Page</a>
+        <br>
+        <a href="w3game.html">Game Test</a>
+        <br>
+        <a href="w6form.html">Form Test</a>
+        <br>
+        <a href="w6strings.html">Strings Test</a>
+        <br>
+        <a href="w8events.html">Events Test</a>
+        <br>
+        <a href="W9class.html">Classes Test</a>
+        <br>
+        <a href="w9palindrome.html">Palindrome Test</a>
+        <br>
+        <a href="w11array.html">Array Test</a>
+        <br>
+        <a href="w11sound.html">Sound Test</a>
+        <br>
+        <a href="w13recursion.html">Recursion Test</a>
+        <br>
+        <a href="w13table.html">Table Test</a>
+    </nav>
+
+    <button id="button1">Click Me</button>
+
+    <script>
+        //Write JavaScript code here
+        //create a function that runs when btn1 is clicked
+        function handleClick(event)
+        {
+            alert("Button1 was clicked");
+
+            //number1 has a scope limited to the handleClick function
+            var number1 = 1;
+        }
+
+        //create a shortcut/nickname/pointer to the HTML button element
+        var button1 = document.getElementById("button1");
+        //Add an event listener
+        button1.addEventListener("click", handleClick);
+
+        //regular function
+        function handleClick2(event)
+        {
+            alert("Button1 was clicked");
+
+            //number1 has a scope limited to the handleClick function
+            var number1 = 1;
+        }
+
+        //normally, to call a function, use this syntax
+        handleClick2();
+    </script>
+</body>
+</html>

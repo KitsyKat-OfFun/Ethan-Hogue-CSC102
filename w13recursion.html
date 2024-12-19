@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W13 Recursion</title>
+</head>
+<body>
+    <header>
+        <h1>W13 Recursion Example</h1>
+        <!-- A nav section for the menu -->
+        <nav>
+            <!-- Anchor tag -->
+            <a href="index.html">Index Page</a>
+            <br>
+            <a href="boards.html">Boards Page</a>
+            <br>
+            <a href="w2basics.html">Basics Page</a>
+            <br>
+            <a href="w3game.html">Game Test</a>
+            <br>
+            <a href="w6form.html">Form Test</a>
+            <br>
+            <a href="w6strings.html">Strings Test</a>
+            <br>
+            <a href="w8events.html">Events Test</a>
+            <br>
+            <a href="W9class.html">Classes Test</a>
+            <br>
+            <a href="w9palindrome.html">Palindrome Test</a>
+            <br>
+            <a href="w11array.html">Array Test</a>
+            <br>
+            <a href="w11sound.html">Sound Test</a>
+            <br>
+            <a href="w13recursion.html">Recursion Test</a>
+            <br>
+            <a href="w13table.html">Table Test</a>
+        </nav>
+    </header>
+    <script>
+        //a recursive function calls itself, not too dissimilar to a loop
+
+        function sumTo(number)
+        {
+            //condition to exit the loop
+            if (number == 1)
+            {
+                return 1;
+            }
+            else //if the number is greater that 1, the loop continues
+            {
+                return number + sumTo(number-1);
+            }
+        }
+
+        //let's say that 5 is our number, and we want to add all the numbers that make up 5 together. 5+4+3+2+1=15. That's what we want.
+        console.log("Sum of numbers from 1-5: " + sumTo(5));
+    </script>
+</body>
+</html>
